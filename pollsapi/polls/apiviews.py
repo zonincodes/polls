@@ -21,5 +21,10 @@ class ChoiceList(generics.ListCreateAPIView):
     serializer_class = ChoiceSerializer
 
 
+class ChoiceDetail(generics.RetrieveAPIView):
+    queryset = Choice.objects.all()
+    serializer_class = ChoiceSerializer
+
+
 class CreateVote(generics.CreateAPIView):
     serializer_class = VoteSerializer
